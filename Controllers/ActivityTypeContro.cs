@@ -6,6 +6,7 @@ using TravelAPI.Models;
 using TravelAPI.DBContexts;
 using TravelAPI.Services;
 using Microsoft.EntityFrameworkCore;
+
 namespace TravelAPI.Controllers
 {
     [Route("[controller]")]
@@ -91,16 +92,4 @@ namespace TravelAPI.Controllers
     }
 }
 
-/*
-Récupérer tous les types d'activités : Endpoint GET /api/activitytypes
-Récupérer un type d'activité par ID : Endpoint GET /api/activitytypes/{id}
-Créer un nouveau type d'activité : Endpoint POST /api/activitytypes
-Mettre à jour un type d'activité existant : Endpoint PUT /api/activitytypes/{id}
-Supprimer un type d'activité existant : Endpoint DELETE /api/activitytypes/{id}
 
-Récupérer les activités associées à un type spécifique :Endpoint: GET / api / activitytypes /{ id}/ activities
-Description: Cette route permet de récupérer toutes les activités associées à un type spécifique d'activité.
-
-Récupérer les statistiques d'utilisation pour un type d'activité donné :
-Description: Cette route permet de récupérer des statistiques spécifiques d'utilisation pour un type d'activité particulier, telles que le nombre total d'activités associées à ce type, la date de création, etc.
-*/

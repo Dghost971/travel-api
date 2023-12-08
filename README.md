@@ -10,9 +10,9 @@ The Travel API is a comprehensive solution developed in C# for efficient managem
 * User Management: User profile management.
 
 ## Technologies Used
-ASP.NET Core: Framework for building APIs and web applications.
-Entity Framework Core: ORM for database interaction.
-Swagger: Tool for API documentation and exploration.
+* ASP.NET Core: Framework for building APIs and web applications.
+* Entity Framework Core: ORM for database interaction.
+* Swagger: Tool for API documentation and exploration.
 
 ## Usage
 To get started with the Travel API, follow these steps:

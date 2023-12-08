@@ -1,7 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TravelAPI.DBContexts;
 using TravelAPI.Models;
-using TravelAPI.DBContexts;
 using TravelAPI.Services;
 using TravelAPI.Controllers;
 using System.Text.Json.Serialization;
@@ -44,7 +43,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
     // specifying the Swagger JSON endpoint.
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1"); // Adjust the endpoint path if necessary
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "TravelAPI"); // Adjust the endpoint path if necessary
     });
 }
 

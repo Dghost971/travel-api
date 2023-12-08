@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using TravelAPI.Models;
 using TravelAPI.DBContexts;
-using TravelAPI.Services;
 using TravelAPI.Controllers;
 
 namespace TravelAPI.Services

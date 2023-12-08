@@ -1,4 +1,3 @@
-using System.Diagnostics;
 namespace TravelAPI.Models
 {
     public class Activites

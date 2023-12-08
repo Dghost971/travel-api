@@ -1,4 +1,3 @@
-using System;
 namespace TravelAPI.Models
 {
     public class Comments
