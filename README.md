@@ -13,6 +13,9 @@ The Travel API is a comprehensive solution developed in C# for efficient managem
 * ASP.NET Core: Framework for building APIs and web applications.
 * Entity Framework Core: ORM for database interaction.
 * Swagger: Tool for API documentation and exploration.
+* Html
+* CSS
+* JavaScript
 
 ## Usage
 To get started with the Travel API, follow these steps:
@@ -35,5 +38,7 @@ Run the Application:
 dotnet run
 ```
 ## Explore the API:
-Open your browser and navigate to http://localhost:5254/swagger/index.html to view and interact with the API documentation using Swagger.
+Open your browser and navigate to http://localhost:5254/ to enjoy our beautiful Web App.
+
+You can also go to http://localhost:5254/swagger/index.html to view and interact with the API documentation using Swagger.
 
