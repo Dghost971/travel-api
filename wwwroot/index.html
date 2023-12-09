@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>TravelAPI Home</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://localhost:5254" class="header-link">
+        <h1>TravelAPI GUI</h1>
+      </a>
+    </header>
+    <h1>Welcome to the Dashboard</h1>
+    <button onclick="navigate('activites')">Activites</button>
+    <button onclick="navigate('activityType')">Activity Types</button>
+    <button onclick="navigate('budget')">Budget</button>
+    <button onclick="navigate('destination')">Destination</button>
+    <button onclick="navigate('comments')">Comments</button>
+    <button onclick="navigate('user')">User</button>
+    <button onclick="navigate('voyage')">Voyages</button>
+    <!-- Add more buttons for other modes -->
+
+    <script>
+      function navigate(mode) {
+        if (mode === "activityType") {
+          window.location.href = "ActivityType.html"; // Redirect to ActivityType.html
+        } else if (mode === "voyage") {
+          window.location.href = "Voyage.html"; // Redirect to Voyages.html (if you have a Voyages page)
+        } else if (mode === "budget") {
+          window.location.href = "Budget.html"; // Redirect to Budget.html
+        } else if (mode === "destination") {
+          window.location.href = "Destination.html"; // Redirect to Destination.html
+        } else if (mode === "comments") {
+          window.location.href = "Comment.html"; // Redirect to Comments.html
+        } else if (mode === "user") {
+          window.location.href = "User.html"; // Redirect to User.html
+        } else if (mode === "activites") {
+          window.location.href = "Activites.html"; // Redirect to Activites.html
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -85,18 +85,3 @@ namespace TravelAPI.Controllers
 
 
 
-/*
-Récupérer tous les utilisateurs : Endpoint GET /api/users
-Récupérer un utilisateur par ID : Endpoint GET /api/users/{id}
-Créer un nouvel utilisateur : Endpoint POST /api/users
-Mettre à jour un utilisateur existant : Endpoint PUT /api/users/{id}
-Supprimer un utilisateur existant : Endpoint DELETE /api/users/{id}
-
-Récupérer les commentaires d'un utilisateur :
-Endpoint : GET /api/users/{id}/comments
-Description : Cette route permet de récupérer les commentaires publiés par un utilisateur spécifique en utilisant son ID.
-
-Récupérer les voyages d'un utilisateur :
-Endpoint : GET /api/users/{id}/trips
-Description : Cette route permet de récupérer les voyages effectués par un utilisateur spécifique, fournissant des détails sur les voyages planifiés ou passés associés à cet utilisateur.
-*/

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TravelAPI</title>
+    <link rel="stylesheet" href="Activites.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://localhost:5254" class="header-link">
+        <h1>TravelAPI GUI</h1>
+      </a>
+    </header>
+
+    <!--get all activites-->
+    <div class="container">
+      <button id="fetchButton">Get all Activites</button>
+      <h2>Activites:</h2>
+      <ul id="activitesList"></ul>
+    </div>
+
+    <!--get  activites by id update & delete-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getActivityType()">
+        <label for="activitesId">Find Activites:</label>
+        <input
+          type="text"
+          id="activitesId"
+          pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+          placeholder="Enter Activites id"
+          title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+          required
+        />
+        <button type="submit">Get Activites</button>
+      </form>
+      <div id="activitesResponse"></div>
+    </div>
+
+    <!--create  activites type-->
+    <div class="container">
+      <form id="createActivityForm">
+        <label for="activityName">Activity Name:</label><br />
+        <input
+          type="text"
+          id="activityName"
+          name="activityName"
+          pattern="[A-Za-z ]+"
+          placeholder="Enter Activity Name"
+          title="Please enter letters and spaces only"
+          required
+        /><br /><br />
+        <label for="activityDescription">Activity Description:</label><br />
+        <input
+          type="text"
+          id="activityDescription"
+          name="activityDescription"
+          pattern="[A-Za-z0-9 .,!?]+"
+          placeholder="Enter Activity Description"
+          title="Please enter alphanumeric characters, spaces, and punctuation"
+          required
+        /><br /><br />
+        <label for="activityDate">Activity Date:</label><br />
+        <input
+          type="date"
+          id="activityDate"
+          name="activityDate"
+          required
+        /><br /><br />
+        <label for="activityStartTime">Start Time:</label><br />
+        <input
+          type="time"
+          id="activityStartTime"
+          name="activityStartTime"
+          required
+        /><br /><br />
+        <label for="activityEndTime">End Time:</label><br />
+        <input
+          type="time"
+          id="activityEndTime"
+          name="activityEndTime"
+          required
+        /><br /><br />
+        <button type="submit">Create Activity</button>
+      </form>
+      <div id="activityResponse"></div>
+    </div>
+
+    <!--get  activites by activity type-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getRelatedActivities()">
+        <label for="activitesId">Find activites by type:</label>
+        <input
+          type="text"
+          id="activitesId"
+          pattern="[A-Za-z]+"
+          placeholder="Enter Activity Type name"
+          title="Please enter a valid Activity Type"
+          required
+        />
+        <button type="submit">Get Activites</button>
+      </form>
+      <h2>Activities:</h2>
+      <ul id="activityList"></ul>
+    </div>
+
+    <!--get upcoming activites-->
+    <div class="container">
+      <button id="fetchButton">Get Upcoming Activites</button>
+      <h2>Upcoming Activites:</h2>
+      <ul id="activitesList"></ul>
+    </div>
+
+    <script src="Activites.js"></script>
+  </body>
+</html>

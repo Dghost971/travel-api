@@ -40,8 +40,6 @@ namespace TravelAPI.Services
             if (existingUser != null)
             {
                 existingUser.UserName = updatedUser.UserName;
-                existingUser.FirstName = updatedUser.FirstName;
-                existingUser.LastName = updatedUser.LastName;
                 existingUser.Email = updatedUser.Email;
                 _dbContext.SaveChanges();
                 return ServiceActionResult.FromSuccess();

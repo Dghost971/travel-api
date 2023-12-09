@@ -1,18 +1,16 @@
 using Microsoft.EntityFrameworkCore;
 using TravelAPI.DBContexts;
-using TravelAPI.Models;
 using TravelAPI.Services;
-using TravelAPI.Controllers;
-using System.Text.Json.Serialization;
+using TravelAPI.Configurations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
-
 builder.Services.AddEndpointsApiExplorer();
-
-// Add Swagger services
 builder.Services.AddSwaggerGen();
+builder.Services.AddAutoMapper(typeof(MapperConfig));
+
+
 
 builder.Services.AddDbContext<TravelDbContext>(options =>
 {
@@ -52,5 +50,7 @@ if (app.Environment.IsDevelopment() || app.Environment.IsProduction())
 app.UseAuthorization();
 
 app.MapControllers();
+app.UseDefaultFiles();
+app.UseStaticFiles();
 
 app.Run();

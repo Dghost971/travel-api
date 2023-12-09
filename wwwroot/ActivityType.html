@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TravelAPI</title>
+    <link rel="stylesheet" href="ActivityType.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://localhost:5254" class="header-link">
+        <h1>TravelAPI GUI</h1>
+      </a>
+    </header>
+
+    <!--get all activity type-->
+    <div class="container">
+      <button id="fetchButton">Get Activity Types</button>
+      <h2>Activity Types:</h2>
+      <ul id="activityTypeList"></ul>
+    </div>
+
+    <!--get  activity type by id update & delete-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getActivityType()">
+        <label for="activityTypeId">Find Activity Type:</label>
+        <input
+          type="text"
+          id="activityTypeId"
+          pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+          placeholder="Enter Activity Type id"
+          title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+          required
+        />
+        <button type="submit">Get Activity Type</button>
+      </form>
+      <div id="activityTypeResponse"></div>
+    </div>
+
+    <!--create  activity type-->
+    <div class="container">
+      <form id="createActivityTypeForm">
+        <label for="activityTypeName">Add an Activity Type:</label><br />
+        <input
+          type="text"
+          id="activityTypeName"
+          name="activityTypeName"
+          pattern="[A-Za-z]+"
+          placeholder="Enter Activity Type"
+          title="Please enter text only"
+          required
+        /><br /><br />
+        <button type="submit">Create Activity Type</button>
+      </form>
+      <div id="activityTypeResponse"></div>
+    </div>
+
+    <!--get related activites for an activity type-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getRelatedActivities()">
+        <label for="activityTypeId">Find activites related:</label>
+        <input
+          type="text"
+          id="activityTypeId"
+          pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+          placeholder="Enter Activity Type"
+          title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+          required
+        />
+        <button type="submit">Get Activity Type</button>
+      </form>
+      <h2>Related Activities:</h2>
+      <ul id="relatedActivityList"></ul>
+    </div>
+
+    <!--get number of activites related to an activity type-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getActivityStats()">
+        <label for="activityTypeId">get Activity Type stats:</label>
+        <input
+          type="text"
+          id="activityTypeId"
+          pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+          placeholder="Enter Activity Type"
+          title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+          required
+        />
+        <button type="submit">Get Activity Type</button>
+      </form>
+      <div id="activityStats"></div>
+    </div>
+
+    <script src="ActivityType.js"></script>
+  </body>
+</html>

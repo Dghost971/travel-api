@@ -43,7 +43,7 @@ namespace TravelAPI.Services
             }
 
             existingComment.Contents = updatedComment.Contents;
-            existingComment.AuthorName = updatedComment.AuthorName;
+            existingComment.UserName = updatedComment.UserName;
             // Mettre à jour d'autres propriétés si nécessaire
 
             _dbContext.SaveChanges();

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TravelAPI</title>
+    <link rel="stylesheet" href="Destination.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://localhost:5254" class="header-link">
+        <h1>TravelAPI GUI</h1>
+      </a>
+    </header>
+
+        <!--get all Destination-->
+        <div class="container">
+          <button id="fetchButton">Get all Destination </button>
+          <h2>Destination:</h2>
+          <ul id="activitesList"></ul>
+        </div>
+    
+        <!--get  destination by id update & delete-->
+        <div class="container">
+          <form onsubmit="event.preventDefault(); getActivityType()">
+            <label for="destinationId">Find Destination:</label>
+            <input
+              type="text"
+              id="destinationId"
+              pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+              placeholder="Enter Activites id"
+              title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+              required
+            />
+            <button type="submit">Get Destination</button>
+          </form>
+          <div id="activitesResponse"></div>
+        </div>
+    
+        <!--create  destination type-->
+        <div class="container">
+          <form id="createDestinationForm">
+            <label for="destinationCountry">Add a Country:</label><br />
+            <input
+              type="text"
+              id="destinationCountry"
+              name="destinationCountry"
+              pattern="[A-Za-z]+"
+              placeholder="Enter Destination Country"
+              title="Please enter text only"
+              required
+            /><br /><br />
+            <button type="submit">Create Destination</button>
+          </form>
+          <div id="destinationResponse"></div>
+        </div>
+        
+    
+        <!--get popular activities in destination-->
+        <div class="container">
+          <form onsubmit="event.preventDefault(); getRelatedActivities()">
+            <label for="destinationId">Find popular Activites for your destination :</label>
+            <input
+              type="text"
+              id="destinationId"
+              pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+              placeholder="Enter Destination id"
+              title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+              required
+            />
+            <button type="submit">Get Popular Activites</button>
+          </form>
+          <h2> Activities:</h2>
+          <ul id="popularactivitesList"></ul>
+        </div>
+    
+    <script src="Destination.js"></script>
+  </body>
+</html>

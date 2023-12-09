@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TravelAPI</title>
+    <link rel="stylesheet" href="User.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://localhost:5254" class="header-link">
+        <h1>TravelAPI GUI</h1>
+      </a>
+    </header>
+
+        <!--get all use-->
+    <div class="container">
+      <button id="fetchButton">Get all User</button>
+      <h2>User:</h2>
+      <ul id="userList"></ul>
+    </div>
+
+    <!--get  user by id update & delete-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getActivityType()">
+        <label for="userId">Find user:</label>
+        <input
+          type="text"
+          id="userId"
+          pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+          placeholder="Enter Activites id"
+          title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+          required
+        />
+        <button type="submit">Get Activites</button>
+      </form>
+      <div id="activitesResponse"></div>
+    </div>
+
+    <!--create  activites type-->
+    <div class="container">
+      <form id="createUserForm">
+        <label for="userName">User Name:</label><br />
+        <input
+          type="text"
+          id="userName"
+          name="userName"
+          pattern="[A-Za-z ]+"
+          placeholder="Enter User Name"
+          title="Please enter letters and spaces only"
+          required
+        /><br /><br />
+        <label for="userEmail">Email:</label><br />
+        <input
+          type="email"
+          id="userEmail"
+          name="userEmail"
+          pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+          placeholder="Enter Email"
+          title="Please enter a valid email address"
+          required
+        /><br /><br />
+        <label for="password">Password:</label><br />
+        <input
+          type="password"
+          id="password"
+          name="password"
+          pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@#$%^&*()_-]).{8,}"
+          placeholder="Enter Password"
+          title="Please enter your password"
+          required
+        /><br /><br />
+        <label for="registrationDate">Registration Date:</label><br />
+        <input
+          type="date"
+          id="registrationDate"
+          name="registrationDate"
+          readonly
+        /><br /><br />
+        <label for="phoneNumber">Phone Number:</label><br />
+        <input
+          type="tel"
+          id="phoneNumber"
+          name="phoneNumber"
+          pattern="[0-9]+"
+          placeholder="Enter Phone Number"
+          title="Please enter numbers only"
+          required
+        /><br /><br />
+        <button type="submit">Create User</button>
+      </form>
+      <div id="userResponse"></div>
+    </div>
+    
+    <script>
+      // Fill registration date with today's date
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("registrationDate").value = today;
+    </script>
+    
+
+    <!--get  comments of the user -->
+    <div class="container">
+      <button id="fetchButton">Get User Comments</button>
+      <h2> Comments:</h2>
+      <ul id="comentsList"></ul>
+    </div>
+
+    <!--get user voyages-->
+    <div class="container">
+      <button id="fetchButton">Get User Voyages</button>
+      <h2>Voyages:</h2>
+      <ul id="voyagesList"></ul>
+    </div>
+    
+    <script src="User.js"></script>
+  </body>
+</html>

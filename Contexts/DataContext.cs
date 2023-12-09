@@ -88,10 +88,11 @@ namespace TravelAPI.DBContexts
                 .WithMany(a => a.Voyages)    // An Activity can belong to many Voyages
                 .UsingEntity(j => j.ToTable("VoyageActivities")); // Define a junction table named "VoyageActivities"
 
+            /*
             modelBuilder.Entity<Activites>()
-                .HasOne(a => a.ActivityType) // Une Activites a un ActivityType
-                .WithMany() // Un ActivityType peut avoir plusieurs Activites
-                .HasForeignKey(a => a.ActivityTypeId); // Clé étrangère dans Activites pointant vers l'ID de ActivityType
+                .HasOne(a => a.ActivityType) // An Activites has one ActivityType
+                .WithMany() // An ActivityType can have multiple Activites
+                .HasForeignKey(a => a.ActivityType.Id); // Foreign key in Activites pointing to the Id of ActivityType*/
 
         }
     }

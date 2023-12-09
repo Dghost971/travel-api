@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TravelAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class DestinationsController : ControllerBase
     {
@@ -89,20 +89,3 @@ namespace TravelAPI.Controllers
     }
 }
 
-/*
-Récupérer tous les destinations : Endpoint GET /api/destinations
-Récupérer une destination par ID : Endpoint GET /api/destinations/{id}
-Créer une nouvelle destination : Endpoint POST /api/destinations
-Mettre à jour une destination existante : Endpoint PUT /api/destinations/{id}
-Supprimer une destination existante : Endpoint DELETE /api/destinations/{id}
-
-Récupérer les voyages disponibles pour une destination donnée :
-
-Endpoint : GET /api/destinations/{id}/available-voyages
-Description : Cette route permet de récupérer la liste des voyages disponibles associés à une destination spécifique, en utilisant l'ID de la destination.
-Récupérer les informations sur les activités populaires pour une destination :
-
-Endpoint : GET /api/destinations/{id}/popular-activities
-Description : Cette route permet de récupérer des détails sur les activités populaires associées à une destination spécifique, en utilisant l'ID de la destination.
-
-*/

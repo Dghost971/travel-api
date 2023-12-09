@@ -88,13 +88,3 @@ namespace TravelAPI.Controllers
 
 
 
-/*
-Récupérer tous les budgets : Endpoint GET /api/budgets
-Récupérer un budget par ID : Endpoint GET /api/budgets/{id}
-Créer un nouveau budget : Endpoint POST /api/budgets
-Mettre à jour un budget existant : Endpoint PUT /api/budgets/{id}
-Supprimer un budget existant : Endpoint DELETE /api/budgets/{id}
-
-Calculer les dépenses restantes pour un budget donné : Endpoint GET /api/budgets/{id}/remaining-expenses
-Cette route permet de calculer et de renvoyer les dépenses restantes pour un budget spécifique, en soustrayant les dépenses réelles du total alloué pour ce budget.
-*/

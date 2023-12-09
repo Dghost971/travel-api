@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>TravelAPI</title>
+    <link rel="stylesheet" href="Comment.css" />
+  </head>
+  <body>
+    <header>
+      <a href="http://localhost:5254" class="header-link">
+        <h1>TravelAPI GUI</h1>
+      </a>
+    </header>
+
+    <!--get all comments-->
+    <div class="container">
+      <button id="fetchButton">Get all Comments</button>
+      <h2>Comments:</h2>
+      <ul id="commentsList"></ul>
+    </div>
+
+    <!--get  comment by id update & delete-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getActivityType()">
+        <label for="commentId">Find Comment:</label>
+        <input
+          type="text"
+          id="commentId"
+          pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
+          placeholder="Enter Comment id"
+          title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
+          required
+        />
+        <button type="submit">Get Comment</button>
+      </form>
+      <div id="activitesResponse"></div>
+    </div>
+
+    <div class="container">
+      <form id="createCommentsForm">
+        <label for="commentsContents">Add a Comment:</label><br />
+        <input
+          type="text"
+          id="commentsContents"
+          name="commentsContents"
+          placeholder="Enter Comment Content"
+          title="Please enter comment content"
+          required
+          maxlength="250"
+        /><br /><br />
+        <label for="commentsUserName">User Name:</label><br />
+        <input
+          type="text"
+          id="commentsUserName"
+          name="commentsUserName"
+          placeholder="Enter User Name"
+          title="Please enter user name"
+          required
+        /><br /><br />
+        <label for="commentsPublicationDate">Publication Date:</label><br />
+        <input
+          type="date"
+          id="commentsPublicationDate"
+          name="commentsPublicationDate"
+          value=""
+          readonly
+          required
+        /><br /><br />
+        <button type="submit">Add Comment</button>
+      </form>
+      <div id="commentsResponse"></div>
+    </div>
+
+    <script>
+      // Fill publication date with today's date
+      const today = new Date().toISOString().split("T")[0];
+      document.getElementById("commentsPublicationDate").value = today;
+    </script>
+
+    <!--get comments base on content-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); searchCommentsByContent()">
+        <label for="commentContent">Find comment base on content:</label>
+        <input
+          type="text"
+          id="commentContent"
+          pattern="[A-Za-z]+"
+          placeholder="Enter Comment Content"
+          title="Please enter comment content"
+          required
+        />
+        <button type="submit">Get Comments</button>
+      </form>
+      <h2>Comments:</h2>
+      <ul id="CommentList"></ul>
+    </div>
+
+    <!--get comments for a date-->
+    <div class="container">
+      <form onsubmit="event.preventDefault(); getCommentsByDate()">
+        <label for="commentDate">Get Comments by Date:</label>
+        <br />
+        <br />
+        <input type="date" id="commentDate" required />
+        <br />
+        <br />
+        <button type="submit">Get Comments</button>
+      </form>
+      <h2>Comments:</h2>
+      <div id="commentList"></div>
+    </div>
+
+    <script src="Comment.js"></script>
+  </body>
+</html>

@@ -95,16 +95,3 @@ namespace TravelAPI.Controllers
     }
 }
 
-/*
-Récupérer tous les commentaires : Endpoint GET /api/comments
-Récupérer un commentaire par ID : Endpoint GET /api/comments/{id}
-Créer un nouveau commentaire : Endpoint POST /api/comments
-Mettre à jour un commentaire existant : Endpoint PUT /api/comments/{id}
-Supprimer un commentaire existant : Endpoint DELETE /api/comments/{id}
-
-Rechercher des commentaires par contenu :Endpoint : GET /api/comments/search?content={content}
-Description : Cette route permet de rechercher des commentaires en fonction de leur contenu, permettant aux utilisateurs de trouver des commentaires spécifiques en utilisant des mots-clés.
-
-Récupérer les commentaires publiés à une date spécifique :Endpoint : GET /api/comments/by-date?date={YYYY-MM-DD}
-Description : Cette route permet de récupérer tous les commentaires publiés à une date spécifique en utilisant le format YYYY-MM-DD pour la date. Cela permet aux utilisateurs de sélectionner une date précise pour obtenir les commentaires publiés ce jour-là.
-*/

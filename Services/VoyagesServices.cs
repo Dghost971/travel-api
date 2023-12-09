@@ -35,7 +35,7 @@ namespace TravelAPI.Services
             {
                 Id = Guid.NewGuid(),
                 Name = voyage.Name,
-                Destination = voyage.Destination,
+                DestinationCountry = voyage.DestinationCountry,
                 StartDate = voyage.StartDate,
                 EndDate = voyage.EndDate,
                 Activities = voyage.Activities
@@ -57,7 +57,7 @@ namespace TravelAPI.Services
             }
 
             existingVoyage.Name = voyage.Name;
-            existingVoyage.Destination = voyage.Destination;
+            existingVoyage.DestinationCountry = voyage.DestinationCountry;
             existingVoyage.StartDate = voyage.StartDate;
             existingVoyage.EndDate = voyage.EndDate;
             existingVoyage.Activities = voyage.Activities;
