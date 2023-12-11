@@ -52,7 +52,7 @@ namespace TravelAPI.Services
 
             _dbContext.SaveChanges(); // Sauvegarde les modifications dans la base de données
 
-            return ServiceActionResult<Budget>.FromSuccess(existingBudget);
+            return ServiceActionResult<Budget>.FromSuccess(updatedBudget);
         }
 
         // Supprime un budget du DbContext

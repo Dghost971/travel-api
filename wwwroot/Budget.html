@@ -14,14 +14,14 @@
     
     <!--get all activites-->
     <div class="container">
-      <button id="fetchButton">Get all Budget </button>
+      <button id="buttonallbudget">Get all Budget </button>
       <h2>Budget:</h2>
       <ul id="budgetList"></ul>
     </div>
 
     <!--get  activites by id update & delete-->
     <div class="container">
-      <form onsubmit="event.preventDefault(); getActivityType()">
+      <form onsubmit="event.preventDefault(); getBudget()">
         <label for="budgetId">Find Budget:</label>
         <input
           type="text"
@@ -31,14 +31,14 @@
           title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"
           required
         />
-        <button type="submit">Get Activites</button>
+        <button type="submit">Get Budgets</button>
       </form>
-      <div id="activitesResponse"></div>
+      <div id="budgetsResponse"></div>
     </div>
 
     <!--create  budget-->
     <div class="container">
-      <form id="createBudgetForm">
+      <form onsubmit="event.preventDefault(); createBudget()">
         <label for="totalAmount">Total Amount:</label><br />
         <input
           type="number"
@@ -69,11 +69,11 @@
 
     <!--get related activites for an activity type-->
     <div class="container">
-      <form onsubmit="event.preventDefault(); getRelatedActivities()">
-        <label for="budgetId">Find remaining money available:</label>
+      <form onsubmit="event.preventDefault(); RemainingMoney()">
+        <label for="remainmoneybudgetId">Find remaining money available:</label>
         <input
           type="text"
-          id="budgetId"
+          id="moneybudgetId"
           pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
           placeholder="Enter Budget Id"
           title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"

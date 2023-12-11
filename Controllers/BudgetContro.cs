@@ -72,7 +72,7 @@ namespace TravelAPI.Controllers
             return NoContent();
         }
 
-        // GET: api/budgets/{id}/remaining-expenses
+        // GET: Budgets/remaining-expenses/{id}
         [HttpGet("remaining-expenses/{id}")]
         public ActionResult<int> CalculateRemainingExpenses(Guid id)
         {

@@ -63,21 +63,23 @@ namespace TravelAPI.Services
 
         public IEnumerable<Activites> GetPopularActivitiesForDestination(Guid id)
         {
-            var destination = _TravelDbContext.Destination.FirstOrDefault(d => d.Id == id);
+            return null;
+            /*var destination = _TravelDbContext.Destination.FirstOrDefault(d => d.Id == id);
             if (destination == null)
             {
                 return new List<Activites>();
             }
 
-            var popularActivities = _TravelDbContext.Voyages
-                .Where(v => v.Destination.Id == id) // Filter voyages by the destination ID
+            /*var popularActivities = _TravelDbContext.Voyages
+                .Where(v => v.DestinationCountry == id) // Filter voyages by the destination ID
                 .SelectMany(v => v.Activities) // Flatten activities from all matching voyages
                 .GroupBy(a => a) // Group activities
                 .OrderByDescending(group => group.Count()) // Order by count in descending order
                 .Select(group => group.Key) // Select the activities from groups
                 .ToList();
 
-            return popularActivities;
+
+            return popularActivities;*/
         }
 
     }

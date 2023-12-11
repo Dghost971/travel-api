@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace TravelAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
     {

@@ -14,14 +14,14 @@
 
         <!--get all Destination-->
         <div class="container">
-          <button id="fetchButton">Get all Destination </button>
+          <button id="ButtonAllDesti">Get all Destination </button>
           <h2>Destination:</h2>
-          <ul id="activitesList"></ul>
+          <ul id="destiList"></ul>
         </div>
     
         <!--get  destination by id update & delete-->
         <div class="container">
-          <form onsubmit="event.preventDefault(); getActivityType()">
+          <form onsubmit="event.preventDefault(); getDestination()">
             <label for="destinationId">Find Destination:</label>
             <input
               type="text"
@@ -33,16 +33,16 @@
             />
             <button type="submit">Get Destination</button>
           </form>
-          <div id="activitesResponse"></div>
+          <div id="destinationResponse"></div>
         </div>
     
         <!--create  destination type-->
         <div class="container">
-          <form id="createDestinationForm">
+          <form onsubmit="event.preventDefault(); createDestination()">
             <label for="destinationCountry">Add a Country:</label><br />
             <input
               type="text"
-              id="destinationCountry"
+              id="newdestinationCountry"
               name="destinationCountry"
               pattern="[A-Za-z]+"
               placeholder="Enter Destination Country"
@@ -57,11 +57,11 @@
     
         <!--get popular activities in destination-->
         <div class="container">
-          <form onsubmit="event.preventDefault(); getRelatedActivities()">
+          <form onsubmit="event.preventDefault(); getPopularActivitiesForDestination()">
             <label for="destinationId">Find popular Activites for your destination :</label>
             <input
               type="text"
-              id="destinationId"
+              id="popularactivitesdestinationId"
               pattern="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}"
               placeholder="Enter Destination id"
               title="Please enter a valid UUID (e.g., 123e4567-e89b-12d3-a456-426614174001)"

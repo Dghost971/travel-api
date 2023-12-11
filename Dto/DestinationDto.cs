@@ -5,7 +5,7 @@ namespace TravelAPI.Dto
     public class DestinationDTO
     {
         public Guid Id { get; set; }
-        public string Country { get; set; }
+        public required string Country { get; set; }
     }
 
     public class DestinationWithActivitiesDTO : DestinationDTO

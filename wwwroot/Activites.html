@@ -14,14 +14,14 @@
 
     <!--get all activites-->
     <div class="container">
-      <button id="fetchButton">Get all Activites</button>
+      <button id="buttonallact">Get all Activites</button>
       <h2>Activites:</h2>
       <ul id="activitesList"></ul>
     </div>
 
     <!--get  activites by id update & delete-->
     <div class="container">
-      <form onsubmit="event.preventDefault(); getActivityType()">
+      <form onsubmit="event.preventDefault(); getActivites()">
         <label for="activitesId">Find Activites:</label>
         <input
           type="text"
@@ -59,6 +59,11 @@
           title="Please enter alphanumeric characters, spaces, and punctuation"
           required
         /><br /><br />
+        <label for="activityType">Activity Type:</label><br />
+        <select id="activityType" name="activityType" required>
+
+        </select>
+        <br /><br />
         <label for="activityDate">Activity Date:</label><br />
         <input
           type="date"
@@ -87,7 +92,7 @@
 
     <!--get  activites by activity type-->
     <div class="container">
-      <form onsubmit="event.preventDefault(); getRelatedActivities()">
+      <form onsubmit="event.preventDefault(); getActivitiesByType()">
         <label for="activitesId">Find activites by type:</label>
         <input
           type="text"
@@ -99,13 +104,12 @@
         />
         <button type="submit">Get Activites</button>
       </form>
-      <h2>Activities:</h2>
-      <ul id="activityList"></ul>
+      <ul id="activitesbytypeList"></ul>
     </div>
 
     <!--get upcoming activites-->
     <div class="container">
-      <button id="fetchButton">Get Upcoming Activites</button>
+      <button id="buttonupcomingact">Get Upcoming Activites</button>
       <h2>Upcoming Activites:</h2>
       <ul id="activitesList"></ul>
     </div>
